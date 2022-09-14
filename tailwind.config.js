@@ -3,8 +3,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#00eb79',
-        'hover-background': '#50f2a3',
+        dark: '#121212',
+        'hover-primary': '#50f2a3',
+        primary: '#00eb79',
       },
       fontFamily: {
         montserrat: ['Montserrat'],
