@@ -15,6 +15,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - Integrated the [Subgraph](https://thegraph.com/hosted-service/subgraph/vince0656/brand-central?version=current) data using Apollo Client. (both query, subscription client are introduced)
 - Custom hooks are introduced for allTickers, and myTickers data from the subgraph - `useAllTickers`, `useMyTickers`.
 - WalletConnection is implemented with `Blocknative` package. `WalletContext` is introduced and we can get wallet related data by context hook - `useWallet`.
+- Previously selected wallets are being kept in `localStorage`.
 
 ## Uncertain point
 
