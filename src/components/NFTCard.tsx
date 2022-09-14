@@ -39,7 +39,7 @@ export const NFTCard: FC<NFTCardProps> = ({ ticker }) => {
           )}
           <div
             css={[
-              tw`w-full text-center text-2xl text-primary`,
+              tw`w-full text-center text-2xl text-primary font-lcd`,
               hasTokenURI && tw`text-lg`,
             ]}
           >

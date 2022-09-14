@@ -8,6 +8,7 @@ module.exports = {
         primary: '#00eb79',
       },
       fontFamily: {
+        lcd: ['LCD'],
         montserrat: ['Montserrat'],
       },
       minHeight: {

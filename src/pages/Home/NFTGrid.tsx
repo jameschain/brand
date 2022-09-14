@@ -36,12 +36,10 @@ export const NFTGrid: FC = () => {
     if (!loading) {
       setIsNoRecord(activeTab === 'all' && allTickers.length === 0);
       setIsNoRecord(activeTab === 'myTickers' && myTickers.length === 0);
-
-      console.log(activeTab, myTickers, allTickers);
     }
 
     getBlockNumber();
-  }, [activeTab, loading, web3Provider]);
+  }, [activeTab, loading, web3Provider, allTickers, myTickers]);
 
   return (
     <div tw="w-full flex-grow sm:px-12 flex flex-col">
