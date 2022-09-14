@@ -7,7 +7,7 @@ import { Header } from './Header';
 
 export const Layout: FC = ({ children }) => {
   return (
-    <div tw="flex flex-col min-h-full-view bg-dark text-white font-montserrat">
+    <div tw="flex flex-col min-h-full-view bg-dark text-gray-200 font-montserrat">
       <Header />
       <div tw="flex flex-grow relative w-full">{children}</div>
       <Footer />
