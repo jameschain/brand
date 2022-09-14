@@ -1,10 +1,8 @@
 import { FC } from 'react';
 import tw from 'twin.macro';
 
-export interface ITabItem {
-  key: string;
-  label: string;
-}
+import { ITabItem } from '../types';
+
 interface TabsProps {
   items: ITabItem[];
   activeTab: string;

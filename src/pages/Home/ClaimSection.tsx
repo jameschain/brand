@@ -6,8 +6,8 @@ import { Button } from '../../components';
 
 export const ClaimSection: FC = () => {
   return (
-    <div tw="w-full flex flex-col items-center py-10">
-      <div tw="text-4xl">Claim your SHB</div>
+    <div tw="w-full flex flex-col items-center py-10 px-2 md:px-0">
+      <div tw="text-4xl text-primary">Claim your SHB</div>
       <div tw="max-w-2xl text-center mt-6 mb-4 text-lg">
         Separate your SHB from your Brand NFT. Doing this will leave you with
         SHB and your Brand NFT in your wallet. You still maintain your naming
