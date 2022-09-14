@@ -1,9 +1,10 @@
 import 'twin.macro';
 
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import { NFTCard, Tabs } from '../../components';
 import { Loader } from '../../components/Loader';
+import { useWallet } from '../../context';
 import { useAllTickers } from '../../hooks';
 import { ITabItem, ITicker } from '../../types';
 
@@ -15,6 +16,19 @@ const tabItems: ITabItem[] = [
 
 export const NFTGrid: FC = () => {
   const { loading, tickers } = useAllTickers();
+  const { web3Provider } = useWallet();
+
+  const [currentBlock, setCurrentBlock] = useState<number>();
+
+  useEffect(() => {
+    const getBlockNumber = async () => {
+      const _currentBlock = await web3Provider?.getBlockNumber();
+
+      setCurrentBlock(_currentBlock);
+    };
+
+    getBlockNumber();
+  }, [web3Provider]);
 
   const [activeTab, setActiveTab] = useState<string>(tabItems[0].key);
   return (
@@ -33,6 +47,7 @@ export const NFTGrid: FC = () => {
             ))}
         </div>
       )}
+      <div tw="text-gray-400 text-center">Current Block: {currentBlock}</div>
     </div>
   );
 };
