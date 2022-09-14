@@ -64,8 +64,7 @@ export const NFTGrid: FC = () => {
       )}
       {isNoRecord && (
         <div tw="flex-grow flex justify-center items-center">
-          {' '}
-          No Records Found{' '}
+          No Records Found
         </div>
       )}
 
