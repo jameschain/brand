@@ -12,9 +12,17 @@ export const Home: FC = () => {
 
   return (
     <div tw="w-full flex flex-col items-center justify-between">
-      {!address && <WalletButton />}
-      <ClaimSection />
-      <NFTGrid />
+      {!address && (
+        <div tw="flex-grow flex items-center justify-center">
+          <WalletButton />
+        </div>
+      )}
+      {address && (
+        <>
+          <ClaimSection />
+          <NFTGrid />
+        </>
+      )}
     </div>
   );
 };

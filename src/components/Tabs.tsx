@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import tw from 'twin.macro';
 
 export interface ITabItem {
@@ -7,11 +7,11 @@ export interface ITabItem {
 }
 interface TabsProps {
   items: ITabItem[];
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
 }
 
-export const Tabs: FC<TabsProps> = ({ items }) => {
-  const [activeTab, setActiveTab] = useState<string>(items[0].key);
-
+export const Tabs: FC<TabsProps> = ({ activeTab, items, setActiveTab }) => {
   return (
     <div tw="w-full flex justify-center border-b border-gray-500">
       {items.map((item: ITabItem, index) => (
